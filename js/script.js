@@ -23,18 +23,39 @@ const images = [
 ];
 
 const slider = document.getElementById('slider');
-images.forEach((a) => {
-    slider.innerHTML += `<img class="d-none" src="./${a.image}"><br>`
+
+
+let currentImage = 0;
+
+const img = document.getElementById('img');
+const title = document.getElementById('title');
+const text = document.getElementById('text');
+
+setImage(currentImage);
+
+function setImage(index) {
+    img.src = images[index].image;
+    title.innerText = images[index].title;
+    text.innerText = images[index].text;
+
+}
+
+
+document.getElementById('next').addEventListener('click', function () {
+    currentImage++;
+
+    if (currentImage === images.length) {
+        currentImage = 0;
+    }
+    setImage(currentImage)
 });
 
 document.getElementById('prev').addEventListener('click', function () {
-    let allImg = document.querySelectorAll("img");
-    let currentImage = 0;
-
-    allImg[currentImage].classList.remove('d-none');
-    slider.innerHTML += `<h1>${images.title}</h1> <p>${images.text}</p>`
-    console.log(images.title)
-
+    currentImage--;
+    if (currentImage < 0) {
+        currentImage = (images.length - 1);
+    }
+    setImage(currentImage)
 
 })
 

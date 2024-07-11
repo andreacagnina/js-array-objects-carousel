@@ -24,6 +24,21 @@ const images = [
 
 const slider = document.getElementById('slider');
 images.forEach((a) => {
-    slider.innerHTML += `<img src="./${a.image}">`
+    slider.innerHTML += `<img class="d-none" src="./${a.image}"><br>`
 });
+
+document.getElementById('prev').addEventListener('click', function () {
+    let allImg = document.querySelectorAll("img");
+    let currentImage = 0;
+
+    allImg[currentImage].classList.remove('d-none');
+    slider.innerHTML += `<h1>${images.title}</h1> <p>${images.text}</p>`
+    console.log(images.title)
+
+
+})
+
+
+
+
 

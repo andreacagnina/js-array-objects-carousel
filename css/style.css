@@ -16,8 +16,9 @@
 }
 
 .slider {
-    max-width: 900px;
-    height: 800px;
+    width: 900px;
+    height: 900px;
+
 }
 
 img {
@@ -25,8 +26,18 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: right;
-    min-width: 100%;
 
+}
+
+.description {
+    position: absolute;
+    bottom: 2%;
+    color: white;
+    padding: 20px;
+    max-width: 900px;
+    min-width: 900px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.267);
 }
 
 .fa-solid {
@@ -34,14 +45,18 @@ img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.267);
+    padding: 20px;
+    border-radius: 50%;
 }
 
 #prev {
-    left: 5%;
+    left: 15%;
 }
 
 #next {
-    right: 5%;
+    right: 15%;
 }
 
 .d-none {

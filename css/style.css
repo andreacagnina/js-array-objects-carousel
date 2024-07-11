@@ -8,6 +8,11 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slider {
@@ -20,9 +25,21 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: right;
+    min-width: 100%;
 
 }
 
 .fa-solid {
     font-size: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: 5%;
+}
+
+#next {
+    right: 5%;
 }

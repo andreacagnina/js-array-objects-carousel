@@ -44,7 +44,7 @@ function setImage(index) {
 document.getElementById('next').addEventListener('click', function () {
     currentImage++;
 
-    if (currentImage === images.length) {
+    if (currentImage > images.length - 1) {
         currentImage = 0;
     }
     setImage(currentImage)
